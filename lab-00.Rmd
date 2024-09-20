@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Michaela", "Nicola", "Jay", 
+           "Sherrill", "Crystal"),
+  github_username = c("mjoyh", "nicolahan", "jayphilipson", 
+                      "Sherri1l", "crystal-suyue"), 
+  colour = c("lightpink", "green", "green", 
+             "blue", "white"),
+  hobby = c("music", "drawing", "knitting", 
+            "video game", "shooting game"),
+  favourite_number = c(8, 9, 7, 7, 5)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+The plot used bar graph to indicate everyone's favorite color and number through the bar's length and color
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "GitHub username", 
+          y = "Favorite number between 1-10",
+          title = "Self introduction within group")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+After typing "?labs" into the console, there is a search result indicating it's to "modify axis, legend and plot labels" After I edited the code and knit, the names appeared to be on the x and y axis of the graph
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+The bar graph is going to extend forever without tidying the choices since people could have same hobbies, it isn't a concise way to visualize data. I suggest sorting out by data table like excel chart so the axis can coordinate to one cell instead of a bar chart.
